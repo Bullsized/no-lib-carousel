@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel demo page</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="img/carousel.svg" sizes="any" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="parent-div">
+    <h1>Heroes of the Storm Randomized Carousel Videos</h1>
+    <div id="my-carousel"></div>
+    <div id="my-carousel2"></div>
+</div>
+<script type="text/javascript" src="js/random_generator.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript">
+    let chunkSize = 10;
+    var options1 = {
+        container: 'my-carousel',
+        title: containerTitleArray[getRandomNumber(containerTitleArray.length)],
+        subtitle: containerSubtitleArray[getRandomNumber(containerSubtitleArray.length)],
+        fetchCards: getRandomCards(chunkSize)
+    };
+    var carousel1 = new Carousel(options1);
+    carousel1.appendCarousel();
+
+    chunkSize = 15;
+    var options2 = {
+        container: 'my-carousel2',
+        title: containerTitleArray[getRandomNumber(containerTitleArray.length)],
+        subtitle: containerSubtitleArray[getRandomNumber(containerSubtitleArray.length)],
+        fetchCards: getRandomCards(chunkSize)
+    };
+    var carousel2 = new Carousel(options2);
+    carousel2.appendCarousel();
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+#parent-div {
+  padding: 20px;
+}
+
+.svg-title-subtitle {
+  margin-bottom: 30px;
+}
+.svg-title-subtitle .carousel-svg {
+  float: left;
+  width: 60px;
+  margin-right: 20px;
+}
+.svg-title-subtitle .text-next-to-svg {
+  display: inline;
+}
+.svg-title-subtitle .text-next-to-svg h3 {
+  margin-bottom: 10px;
+}
+.svg-title-subtitle .text-next-to-svg p {
+  margin-top: 0px;
+}
+
+.carousel {
+  display: -webkit-inline-box;
+  width: 1615px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+.carousel .carousel-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 36%;
+}
+.carousel .carousel-buttons button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  outline: none;
+}
+.carousel .move-left {
+  margin-left: 5px;
+}
+.carousel .move-right {
+  margin-right: 30px;
+}
+
+.card {
+  width: 300px;
+  min-height: 350px;
+  border-radius: 8px;
+  margin-right: 25px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.02), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.02), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.card .card-img {
+  position: relative;
+}
+.card .card-img img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card .card-img .type-of-card {
+  position: absolute;
+  bottom: 4px;
+  background-color: #ffffff80;
+  padding: 2px 5px;
+  left: 0;
+}
+.card .card-img .duration-of-card {
+  position: absolute;
+  bottom: 4px;
+  background-color: #ffffff80;
+  padding: 2px 5px;
+  right: 0;
+}
+.card .card-text p {
+  color: #663399;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0;
+}
+
+.collection {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 10px 0 -5px #eee, 0 10px 1px -4px rgba(0, 0, 0, 0.12), 0 20px 0 -10px #eee, 0 20px 1px -9px rgba(0, 0, 0, 0.12), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 10px 0 -5px #eee, 0 10px 1px -4px rgba(0, 0, 0, 0.12), 0 20px 0 -10px #eee, 0 20px 1px -9px rgba(0, 0, 0, 0.12), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
