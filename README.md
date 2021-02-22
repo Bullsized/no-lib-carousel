@@ -6,4 +6,4 @@ Information, cards, pictures, paragraphs, etc are based on the Heroes of the Sto
 
 Roboto used accross the project (https://fonts.google.com/specimen/Roboto?preview.text_type=custom).
 
-Carousel SVG icon used for the rows and the favicon: https://www.flaticon.com/free-icon/carousel_896012?term=carousel&page=1&position=3&page=1&position=3&related_id=896012&origin=search
+Carousel SVG icon used for the rows and the favicon (https://www.flaticon.com/free-icon/carousel_896012?term=carousel&page=1&position=3&page=1&position=3&related_id=896012&origin=search)
