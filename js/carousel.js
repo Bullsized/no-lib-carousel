@@ -48,19 +48,28 @@ class Carousel {
     }
 }
 
-let startDisplaying = 0; // start showing number
-let endDisplaying = 4; // end showing number
 const firstCard = 0; // card stack begins
+
+function startingPosition(cards) {
+    for (let card in cards) {
+        if (cards[card].classList.contains('visible')) {
+            return +card;
+            break;
+        }
+    }
+}
 
 function moveToNextCard(cardsDiv) {
     let cards = cardsDiv.getElementsByClassName('card');
+    let startDisplaying = startingPosition(cards);
+    let endDisplaying = +startDisplaying + 4;
     let moveRightButton = cardsDiv.getElementsByClassName('move-right')[0];
     let moveLeftButton = cardsDiv.getElementsByClassName('move-left')[0];
 
     if (endDisplaying + 1 < cards.length) {
         startDisplaying++;
         endDisplaying++;
-        updateCardsVisibility(cards);
+        updateCardsVisibility(cards, startDisplaying, endDisplaying);
 
         if (startDisplaying > 0) {
             moveLeftButton.disabled = false;
@@ -74,13 +83,15 @@ function moveToNextCard(cardsDiv) {
 
 function moveToPreviousCard(cardsDiv) {
     let cards = cardsDiv.getElementsByClassName('card');
+    let startDisplaying = startingPosition(cards);
+    let endDisplaying = +startDisplaying + 4;
     let moveRightButton = cardsDiv.getElementsByClassName('move-right')[0];
     let moveLeftButton = cardsDiv.getElementsByClassName('move-left')[0];
     if (startDisplaying - 1 >= firstCard) {
         startDisplaying--;
         endDisplaying--;
 
-        updateCardsVisibility(cards);
+        updateCardsVisibility(cards, startDisplaying, endDisplaying);
 
         if (endDisplaying < cards.length) {
             moveRightButton.disabled = false;
@@ -92,7 +103,7 @@ function moveToPreviousCard(cardsDiv) {
     }
 }
 
-function updateCardsVisibility(cards) {
+function updateCardsVisibility(cards, startDisplaying, endDisplaying) {
     for (let c = 0; c < cards.length; c++) {
         if (c >= startDisplaying && c <= endDisplaying) {
             cards[c].classList.remove('hidden');
