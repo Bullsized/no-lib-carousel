@@ -109,6 +109,14 @@ body {
   display: none;
 }
 
+.loading .card-img {
+  background-color: #a9a9a9;
+  height: 200px;
+}
+.loading .card-text > svg {
+  max-height: 140px;
+}
+
 @keyframes fadeVisibility {
   0% {
     opacity: 0;
